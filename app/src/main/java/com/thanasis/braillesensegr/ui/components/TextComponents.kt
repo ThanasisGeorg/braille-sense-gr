@@ -52,7 +52,7 @@ fun HeadingText(value: String) {
     Text(
         text = value,
         modifier = Modifier
-            .fillMaxWidth()
+            //.fillMaxWidth()
             .heightIn(),
         style = TextStyle(
             fontSize = 40.sp,
