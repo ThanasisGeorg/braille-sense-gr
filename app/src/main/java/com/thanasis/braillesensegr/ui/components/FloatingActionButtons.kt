@@ -97,6 +97,10 @@ fun ReturnFloatingButton(
 fun NextFloatingButton(
     onNext: () -> Unit,
     context: Context,
+    fontSize: Int,
+    width: Int,
+    height: Int,
+    padding: Int,
     duration: Long = 500L
 ) {
     val haptic = LocalHapticFeedback.current
@@ -108,17 +112,17 @@ fun NextFloatingButton(
                 text = "Επόμενο",
                 color = Color.White,
                 style = TextStyle(
-                    fontSize = 30.sp
+                    fontSize = fontSize.sp
                 )
             )
         },
         icon = {
-            Icon(
+            /*Icon(
                 Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 "Floating action button.",
                 tint = Color.White,
                 modifier = Modifier.size(40.dp)
-            )
+            )*/
         },
         onClick = {
             CoroutineScope(Dispatchers.Main).launch {
@@ -146,8 +150,71 @@ fun NextFloatingButton(
             onNext()
         },
         modifier = Modifier
-            .size(300.dp, 150.dp)
-            .padding(10.dp),
+            .size(width.dp, height.dp)
+            .padding(padding.dp),
+        containerColor = CelticBlue
+    )
+}
+
+@Composable
+fun PreviousFloatingButton(
+    onPrevious: () -> Unit,
+    context: Context,
+    fontSize: Int,
+    width: Int,
+    height: Int,
+    padding: Int,
+    duration: Long = 500L
+) {
+    val haptic = LocalHapticFeedback.current
+    val view = LocalView.current
+
+    ExtendedFloatingActionButton(
+        text = {
+            Text(
+                text = "Προηγούμενο",
+                color = Color.White,
+                style = TextStyle(
+                    fontSize = fontSize.sp
+                )
+            )
+        },
+        icon = {
+            /*Icon(
+                Icons.AutoMirrored.Filled.KeyboardArrowLeft,
+                "Floating action button.",
+                tint = Color.White,
+                modifier = Modifier.size(40.dp)
+            )*/
+        },
+        onClick = {
+            CoroutineScope(Dispatchers.Main).launch {
+                val didVibrate = vibrate(context, duration)
+                Log.d(TAG, "vibrate returned: $didVibrate")
+
+                if (!didVibrate) {
+                    Log.d(TAG, "native vibrator not available -> using Compose HapticFeedback")
+                    try {
+                        haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Compose haptic failed: ${e.message}")
+                    }
+
+                    try {
+                        view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
+                        Log.d(TAG, "view.performHapticFeedback called")
+                    } catch (e: Exception) {
+                        Log.e(TAG, "view.performHapticFeedback failed: ${e.message}")
+                    }
+                } else {
+                    Log.d(TAG, "native vibrator succeeded")
+                }
+            }
+            onPrevious()
+        },
+        modifier = Modifier
+            .size(width.dp, height.dp)
+            .padding(padding.dp),
         containerColor = CelticBlue
     )
 }
@@ -157,6 +224,10 @@ fun NextFloatingButton(
 fun FloatingButtonPreview() {
     NextFloatingButton(
         onNext = {},
-        context = LocalContext.current
+        context = LocalContext.current,
+        fontSize = 30,
+        width = 300,
+        height = 150,
+        padding = 10
     )
 }
