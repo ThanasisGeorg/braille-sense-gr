@@ -31,7 +31,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.thanasis.braillesensegr.BrailleSenseGRApp
 import com.thanasis.braillesensegr.backend.vibrate
-import com.thanasis.braillesensegr.ui.theme.CelticBlue
 import com.thanasis.braillesensegr.ui.theme.Purple40
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -43,6 +42,7 @@ fun ButtonComp(
     value: String,
     width: Int,
     height: Int,
+    color: Color,
     context: Context,
     navHostController: NavHostController,
     duration: Long = 500L
@@ -75,9 +75,11 @@ fun ButtonComp(
                 }
             }
 
-            when(value) {
-                "home" -> navHostController.navigate(BrailleSenseGRApp.Learn.name)
+            when (value) {
+                "learn" -> navHostController.navigate(BrailleSenseGRApp.AskForTutorial.name)
                 "settings" -> navHostController.navigate(BrailleSenseGRApp.Settings.name)
+                "proceed" -> navHostController.navigate(BrailleSenseGRApp.Tutorial.name)
+                "begin", "skip" -> navHostController.navigate(BrailleSenseGRApp.Learn.name)
             }
 
         },
@@ -85,7 +87,7 @@ fun ButtonComp(
             .size(width.dp, height.dp)
             .heightIn(48.dp)
             .background(
-                color = CelticBlue,
+                color = color,
                 shape = RoundedCornerShape(30.dp)
             )
             .fillMaxWidth(),

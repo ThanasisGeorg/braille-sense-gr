@@ -20,11 +20,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.thanasis.braillesensegr.R
+import com.thanasis.braillesensegr.backend.TitleVoice
 import com.thanasis.braillesensegr.ui.components.DotIconButton
 import com.thanasis.braillesensegr.ui.components.NextFloatingButton
 import com.thanasis.braillesensegr.ui.components.NormalText
@@ -62,46 +65,47 @@ val letters = listOf(
 fun Alpha() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.alpha))
     NormalText(
-        value = "A",
+        value = "Α",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Row() {
-        Column() {
-            Row() {
+    Row {
+        Column {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
         }
         Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
+        Column {
+            Row {
                 DotIconButton(context = context, isEnabled = true)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
@@ -115,20 +119,20 @@ fun Alpha() {
         fontSize = 50
     )
     Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column {
+        Row {
             DotIconButton(context = context, isEnabled = true)
             Spacer(modifier = Modifier.width(10.dp))
             DotIconButton(context = context, isEnabled = false)
         }
         Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Row {
             DotIconButton(context = context, isEnabled = false)
             Spacer(modifier = Modifier.width(10.dp))
             DotIconButton(context = context, isEnabled = false)
         }
         Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Row {
             DotIconButton(context = context, isEnabled = false)
             Spacer(modifier = Modifier.width(10.dp))
             DotIconButton(context = context, isEnabled = false)
@@ -140,46 +144,47 @@ fun Alpha() {
 fun Beta() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.beta))
     NormalText(
         value = "Β",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Row() {
-        Column() {
-            Row() {
+    Row {
+        Column {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
         }
         Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
+        Column {
+            Row {
                 DotIconButton(context = context, isEnabled = true)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = true)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
@@ -193,20 +198,20 @@ fun Beta() {
         fontSize = 50
     )
     Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column {
+        Row {
             DotIconButton(context = context, isEnabled = true)
             Spacer(modifier = Modifier.width(10.dp))
             DotIconButton(context = context, isEnabled = false)
         }
         Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Row {
             DotIconButton(context = context, isEnabled = true)
             Spacer(modifier = Modifier.width(10.dp))
             DotIconButton(context = context, isEnabled = false)
         }
         Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Row {
             DotIconButton(context = context, isEnabled = false)
             Spacer(modifier = Modifier.width(10.dp))
             DotIconButton(context = context, isEnabled = false)
@@ -218,46 +223,47 @@ fun Beta() {
 fun Gamma() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.gamma))
     NormalText(
         value = "Γ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Row() {
-        Column() {
-            Row() {
+    Row {
+        Column {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
         }
         Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
+        Column {
+            Row {
                 DotIconButton(context = context, isEnabled = true)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = true)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = true)
             }
             Spacer(modifier = Modifier.height(10.dp))
-            Row() {
+            Row {
                 DotIconButton(context = context, isEnabled = false)
                 Spacer(modifier = Modifier.width(10.dp))
                 DotIconButton(context = context, isEnabled = false)
@@ -296,6 +302,7 @@ fun Gamma() {
 fun Delta() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.delta))
     NormalText(
         value = "Δ",
         textAlign = TextAlign.Center,
@@ -374,6 +381,7 @@ fun Delta() {
 fun Epsilon() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.epsilon))
     NormalText(
         value = "Ε",
         textAlign = TextAlign.Center,
@@ -452,6 +460,7 @@ fun Epsilon() {
 fun Zita() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.zita))
     NormalText(
         value = "Ζ",
         textAlign = TextAlign.Center,
@@ -530,6 +539,7 @@ fun Zita() {
 fun Ita() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.ita))
     NormalText(
         value = "Η",
         textAlign = TextAlign.Center,
@@ -608,6 +618,7 @@ fun Ita() {
 fun Theta() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.theta))
     NormalText(
         value = "Θ",
         textAlign = TextAlign.Center,
@@ -686,6 +697,7 @@ fun Theta() {
 fun Iota() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.iota))
     NormalText(
         value = "Ι",
         textAlign = TextAlign.Center,
@@ -764,6 +776,7 @@ fun Iota() {
 fun Kappa() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.kappa))
     NormalText(
         value = "Κ",
         textAlign = TextAlign.Center,
@@ -842,6 +855,7 @@ fun Kappa() {
 fun Lambda() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.lambda))
     NormalText(
         value = "Λ",
         textAlign = TextAlign.Center,
@@ -920,6 +934,7 @@ fun Lambda() {
 fun Mi() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.mi))
     NormalText(
         value = "Μ",
         textAlign = TextAlign.Center,
@@ -998,6 +1013,7 @@ fun Mi() {
 fun Ni() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.ni))
     NormalText(
         value = "Ν",
         textAlign = TextAlign.Center,
@@ -1076,6 +1092,7 @@ fun Ni() {
 fun Ksi() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.ksi))
     NormalText(
         value = "Ξ",
         textAlign = TextAlign.Center,
@@ -1154,6 +1171,7 @@ fun Ksi() {
 fun Omicron() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.omicron))
     NormalText(
         value = "Ο",
         textAlign = TextAlign.Center,
@@ -1232,6 +1250,7 @@ fun Omicron() {
 fun Pi() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.pi))
     NormalText(
         value = "Π",
         textAlign = TextAlign.Center,
@@ -1310,6 +1329,7 @@ fun Pi() {
 fun Ro() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.ro))
     NormalText(
         value = "Ρ",
         textAlign = TextAlign.Center,
@@ -1388,6 +1408,7 @@ fun Ro() {
 fun Sigma() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.sigma))
     NormalText(
         value = "Σ",
         textAlign = TextAlign.Center,
@@ -1466,6 +1487,7 @@ fun Sigma() {
 fun Taf() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.taf))
     NormalText(
         value = "Τ",
         textAlign = TextAlign.Center,
@@ -1544,6 +1566,7 @@ fun Taf() {
 fun Upsilon() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.upsilon))
     NormalText(
         value = "Υ",
         textAlign = TextAlign.Center,
@@ -1622,6 +1645,7 @@ fun Upsilon() {
 fun Fi() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.fi))
     NormalText(
         value = "Φ",
         textAlign = TextAlign.Center,
@@ -1700,6 +1724,7 @@ fun Fi() {
 fun Xi() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.xi))
     NormalText(
         value = "Χ",
         textAlign = TextAlign.Center,
@@ -1778,6 +1803,7 @@ fun Xi() {
 fun Psi() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.psi))
     NormalText(
         value = "Ψ",
         textAlign = TextAlign.Center,
@@ -1856,6 +1882,7 @@ fun Psi() {
 fun Omega() {
     val context = LocalContext.current
 
+    TitleVoice(stringResource(id = R.string.omega))
     NormalText(
         value = "Ω",
         textAlign = TextAlign.Center,

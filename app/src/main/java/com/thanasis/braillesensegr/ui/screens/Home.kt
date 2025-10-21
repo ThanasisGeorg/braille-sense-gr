@@ -19,6 +19,7 @@ import com.thanasis.braillesensegr.R
 import com.thanasis.braillesensegr.backend.TitleVoice
 import com.thanasis.braillesensegr.ui.components.ButtonComp
 import com.thanasis.braillesensegr.ui.components.HeadingText
+import com.thanasis.braillesensegr.ui.theme.CelticBlue
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -34,9 +35,21 @@ fun HomeInit(navHostController: NavHostController, context: Context){
             Spacer(modifier = Modifier.height(100.dp))
             HeadingText("Καλωσήρθες στο BrailleSense GR")
             Spacer(modifier = Modifier.height(100.dp))
-            ButtonComp(stringResource(id = R.string.learn), "home", 500, 250,  context, navHostController)
+            ButtonComp(stringResource(id = R.string.learn),
+                "learn",
+                500,
+                250,
+                CelticBlue,
+                context,
+                navHostController)
             Spacer(modifier = Modifier.height(50.dp))
-            ButtonComp(stringResource(id = R.string.settings), "settings", 500, 250,  context, navHostController)
+            ButtonComp(stringResource(id = R.string.settings),
+                "settings",
+                500,
+                250,
+                CelticBlue,
+                context,
+                navHostController)
         }
     }
 }
