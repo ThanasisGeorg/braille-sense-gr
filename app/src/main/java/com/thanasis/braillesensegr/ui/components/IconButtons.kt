@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.HapticFeedbackConstants
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -29,6 +30,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import com.thanasis.braillesensegr.R
 import com.thanasis.braillesensegr.backend.vibrate
 import kotlinx.coroutines.CoroutineScope
@@ -72,7 +74,7 @@ fun DotIconButton(context: Context, isEnabled: Boolean, duration: Long = 40L) {
         colors = IconButtonColors(Color.Black, Color.Black, Color.LightGray, Color.LightGray),
         onClick = {  },
         modifier = Modifier
-            .wrapContentSize()
+            .size(115.dp)
             .pointerInput(Unit) {
                 detectTapGestures(
                     onPress = {

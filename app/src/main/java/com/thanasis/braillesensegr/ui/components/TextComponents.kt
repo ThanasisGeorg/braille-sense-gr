@@ -28,17 +28,16 @@ fun NormalText(value: String, textAlign: TextAlign, fontSize: Int) {
     )
 }
 @Composable
-fun HeadingText(value: String) {
+fun HeadingText(value: String, fontSize: Int, textAlign: TextAlign) {
     Text(
         text = value,
         modifier = Modifier
-            //.fillMaxWidth()
             .heightIn(),
         style = TextStyle(
-            fontSize = 40.sp,
+            fontSize = fontSize.sp,
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Normal
         ),
-        textAlign = TextAlign.Center
+        textAlign = textAlign
     )
 }

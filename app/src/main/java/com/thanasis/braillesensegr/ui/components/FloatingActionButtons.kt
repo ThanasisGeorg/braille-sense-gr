@@ -81,14 +81,16 @@ fun ReturnFloatingButton(
             navHostController.navigate(BrailleSenseGRApp.Home.name)
         },
         modifier = Modifier
-            .size(80.dp)
+            .fillMaxWidth()
             .padding(10.dp),
         containerColor = CelticBlue,
     ) {
-        Icon(
-            Icons.AutoMirrored.Filled.KeyboardArrowLeft,
-            "Floating action button.",
-            tint = Color.White
+        Text(
+            text = "Επιστροφή",
+            color = Color.White,
+            style = TextStyle(
+                fontSize = 20.sp
+            )
         )
     }
 }

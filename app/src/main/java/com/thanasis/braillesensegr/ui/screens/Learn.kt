@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -67,74 +68,30 @@ fun Alpha() {
 
     TitleVoice(stringResource(id = R.string.alpha))
     NormalText(
-        value = "Α",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row {
-        Column {
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column {
-            Row {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "α",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
         Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(30.dp))
         Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(30.dp))
         Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -146,74 +103,30 @@ fun Beta() {
 
     TitleVoice(stringResource(id = R.string.beta))
     NormalText(
-        value = "Β",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row {
-        Column {
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column {
-            Row {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "β",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
         Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(30.dp))
         Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(30.dp))
         Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -225,74 +138,30 @@ fun Gamma() {
 
     TitleVoice(stringResource(id = R.string.gamma))
     NormalText(
-        value = "Γ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row {
-        Column {
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column {
-            Row {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "γ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
-            DotIconButton(context = context, isEnabled = true)
-        }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
-            DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
+            DotIconButton(context = context, isEnabled = true)
+            Spacer(modifier = Modifier.width(50.dp))
+            DotIconButton(context = context, isEnabled = true)
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -304,74 +173,30 @@ fun Delta() {
 
     TitleVoice(stringResource(id = R.string.delta))
     NormalText(
-        value = "Δ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "δ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
-            DotIconButton(context = context, isEnabled = true)
-        }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
-            DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
+            DotIconButton(context = context, isEnabled = true)
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
+            DotIconButton(context = context, isEnabled = false)
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -383,74 +208,30 @@ fun Epsilon() {
 
     TitleVoice(stringResource(id = R.string.epsilon))
     NormalText(
-        value = "Ε",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ε",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -462,74 +243,30 @@ fun Zita() {
 
     TitleVoice(stringResource(id = R.string.zita))
     NormalText(
-        value = "Ζ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ζ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
     }
@@ -541,74 +278,30 @@ fun Ita() {
 
     TitleVoice(stringResource(id = R.string.ita))
     NormalText(
-        value = "Η",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "η",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -620,74 +313,30 @@ fun Theta() {
 
     TitleVoice(stringResource(id = R.string.theta))
     NormalText(
-        value = "Θ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "θ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
-            DotIconButton(context = context, isEnabled = true)
-        }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
-            DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
+            DotIconButton(context = context, isEnabled = true)
+        }
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
+            DotIconButton(context = context, isEnabled = false)
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
     }
@@ -699,74 +348,30 @@ fun Iota() {
 
     TitleVoice(stringResource(id = R.string.iota))
     NormalText(
-        value = "Ι",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ι",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -778,74 +383,30 @@ fun Kappa() {
 
     TitleVoice(stringResource(id = R.string.kappa))
     NormalText(
-        value = "Κ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "κ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -857,74 +418,30 @@ fun Lambda() {
 
     TitleVoice(stringResource(id = R.string.lambda))
     NormalText(
-        value = "Λ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "λ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -936,74 +453,30 @@ fun Mi() {
 
     TitleVoice(stringResource(id = R.string.mi))
     NormalText(
-        value = "Μ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "μ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1015,74 +488,30 @@ fun Ni() {
 
     TitleVoice(stringResource(id = R.string.ni))
     NormalText(
-        value = "Ν",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ν",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1094,74 +523,30 @@ fun Ksi() {
 
     TitleVoice(stringResource(id = R.string.ksi))
     NormalText(
-        value = "Ξ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ξ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
     }
@@ -1173,74 +558,30 @@ fun Omicron() {
 
     TitleVoice(stringResource(id = R.string.omicron))
     NormalText(
-        value = "Ο",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ο",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1252,74 +593,30 @@ fun Pi() {
 
     TitleVoice(stringResource(id = R.string.pi))
     NormalText(
-        value = "Π",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "π",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1331,74 +628,30 @@ fun Ro() {
 
     TitleVoice(stringResource(id = R.string.ro))
     NormalText(
-        value = "Ρ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ρ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1410,74 +663,30 @@ fun Sigma() {
 
     TitleVoice(stringResource(id = R.string.sigma))
     NormalText(
-        value = "Σ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "σ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1489,74 +698,30 @@ fun Taf() {
 
     TitleVoice(stringResource(id = R.string.taf))
     NormalText(
-        value = "Τ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "τ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1568,74 +733,30 @@ fun Upsilon() {
 
     TitleVoice(stringResource(id = R.string.upsilon))
     NormalText(
-        value = "Υ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "υ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
     }
@@ -1647,74 +768,30 @@ fun Fi() {
 
     TitleVoice(stringResource(id = R.string.fi))
     NormalText(
-        value = "Φ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "φ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1726,74 +803,30 @@ fun Xi() {
 
     TitleVoice(stringResource(id = R.string.xi))
     NormalText(
-        value = "Χ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "χ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -1805,74 +838,30 @@ fun Psi() {
 
     TitleVoice(stringResource(id = R.string.psi))
     NormalText(
-        value = "Ψ",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ψ",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
     }
@@ -1884,74 +873,30 @@ fun Omega() {
 
     TitleVoice(stringResource(id = R.string.omega))
     NormalText(
-        value = "Ω",
-        textAlign = TextAlign.Center,
-        fontSize = 50
-    )
-    Row() {
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-        }
-        Spacer(modifier = Modifier.width(30.dp))
-        Column() {
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = true)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = true)
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Row() {
-                DotIconButton(context = context, isEnabled = false)
-                Spacer(modifier = Modifier.width(10.dp))
-                DotIconButton(context = context, isEnabled = false)
-            }
-        }
-    }
-    Spacer(modifier = Modifier.height(10.dp))
-    NormalText(
         value = "ω",
         textAlign = TextAlign.Center,
         fontSize = 50
     )
-    Spacer(modifier = Modifier.width(30.dp))
-    Column() {
-        Row() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxHeight()
+    ) {
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = true)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = true)
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Row() {
+        Spacer(modifier = Modifier.height(30.dp))
+        Row {
             DotIconButton(context = context, isEnabled = false)
-            Spacer(modifier = Modifier.width(10.dp))
+            Spacer(modifier = Modifier.width(50.dp))
             DotIconButton(context = context, isEnabled = false)
         }
     }
@@ -2041,7 +986,6 @@ fun LearnInit(navHostController: NavHostController) {
     val context = LocalContext.current
     var currentIndex by remember { mutableIntStateOf(0) }
 
-    //TitleVoice(stringResource(R.string.learnVoiceText))
     Scaffold {
         Column {
             Spacer(modifier = Modifier.height(40.dp))
@@ -2055,22 +999,15 @@ fun LearnInit(navHostController: NavHostController) {
                     .padding(10.dp, 0.dp)
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
-                //HeadingText(stringResource(R.string.learn))
                 Column(
                     Modifier
                         .fillMaxWidth()
-                        .height(500.dp),
+                        .height(580.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Top
                 ) {
                     DrawGreekBrailleLetter(currentIndex)
                 }
-                NormalText(
-                    value = letters[currentIndex],
-                    textAlign = TextAlign.Center,
-                    fontSize = 50
-                )
-                Spacer(modifier = Modifier.height(20.dp))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center
@@ -2116,8 +1053,83 @@ fun LearnInit(navHostController: NavHostController) {
     }
 }
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@Composable
+fun LearnInit_(navHostController: NavHostController) {
+    val context = LocalContext.current
+    var currentIndex by remember { mutableIntStateOf(0) }
+
+    //TitleVoice(stringResource(R.string.learnVoiceText))
+    Scaffold {
+        Column {
+            Spacer(modifier = Modifier.height(40.dp))
+            ReturnFloatingButton(
+                navHostController = navHostController,
+                context = context
+            )
+            Column(
+                Modifier
+                    .fillMaxSize()
+                    .padding(10.dp, 0.dp)
+            ) {
+                Spacer(modifier = Modifier.height(10.dp))
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .height(570.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Top
+                ) {
+                    DrawGreekBrailleLetter(currentIndex)
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    if (currentIndex == 0) {
+                        NextFloatingButton(
+                            onNext = {
+                                currentIndex = (currentIndex + 1) % letters.size
+                            },
+                            context = context,
+                            fontSize = 30,
+                            width = 300,
+                            height = 150,
+                            padding = 10
+                        )
+                    } else {
+                        PreviousFloatingButton(
+                            onPrevious = {
+                                Log.d("TAG", "CurrentIndex: $currentIndex")
+                                currentIndex = (currentIndex - 1) % letters.size
+                            },
+                            context = context,
+                            fontSize = 19,
+                            width = 190,
+                            height = 150,
+                            padding = 10
+                        )
+                        NextFloatingButton(
+                            onNext = {
+                                Log.d("TAG", "CurrentIndex: $currentIndex")
+                                currentIndex = (currentIndex + 1) % letters.size
+                            },
+                            context = context,
+                            fontSize = 19,
+                            width = 190,
+                            height = 150,
+                            padding = 10
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @Preview
 @Composable
 fun LearnInitPreview() {
-    LearnInit(navHostController = rememberNavController())
+    LearnInit_(navHostController = rememberNavController())
 }

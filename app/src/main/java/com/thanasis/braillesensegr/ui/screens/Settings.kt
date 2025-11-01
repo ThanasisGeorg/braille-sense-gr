@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -36,7 +37,7 @@ fun SettingsInit(navHostController: NavHostController){
                     .padding(10.dp, 0.dp)
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
-                HeadingText(stringResource(R.string.settings))
+                HeadingText(stringResource(R.string.settings), 40, TextAlign.Center)
             }
         }
     }
