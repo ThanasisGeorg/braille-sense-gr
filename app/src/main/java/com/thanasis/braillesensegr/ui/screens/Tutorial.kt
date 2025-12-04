@@ -35,9 +35,9 @@ import com.thanasis.braillesensegr.ui.theme.CelticBlue
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun TutorialInit(navHostController: NavHostController, context: Context) {
+fun TutorialInit(navHostController: NavHostController, context: Context, isEnabled: Boolean) {
     var text: String
-    TitleVoice(stringResource(R.string.tutorialVoiceText))
+    TitleVoice(stringResource(R.string.tutorialVoiceText), isEnabled)
     Scaffold {
         Column {
             Spacer(modifier = Modifier.height(40.dp))
@@ -141,5 +141,5 @@ fun TutorialInit(navHostController: NavHostController, context: Context) {
 @Preview
 @Composable
 fun TutorialPreview() {
-    TutorialInit(navHostController = rememberNavController(), context = LocalContext.current)
+    TutorialInit(navHostController = rememberNavController(), context = LocalContext.current, isEnabled = false)
 }

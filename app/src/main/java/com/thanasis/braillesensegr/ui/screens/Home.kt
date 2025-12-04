@@ -24,8 +24,8 @@ import com.thanasis.braillesensegr.ui.theme.CelticBlue
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun HomeInit(navHostController: NavHostController, context: Context){
-    //TitleVoice(stringResource(R.string.welcomeVoiceText))
+fun HomeInit(navHostController: NavHostController, context: Context, isEnabled: Boolean) {
+    TitleVoice(stringResource(R.string.welcomeVoiceText), isEnabled)
     Scaffold {
         Column(
             Modifier

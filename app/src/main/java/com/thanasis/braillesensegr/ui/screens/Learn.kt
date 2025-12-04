@@ -51,7 +51,6 @@ class HapticController(private val context: Context) {
     var isVibrating: Boolean = false
         private set
 
-    // The duration of the single cycle in the continuous loop
     private val VIBRATION_DURATION = 40L
 
     fun startContinuousVibration() {
@@ -60,11 +59,9 @@ class HapticController(private val context: Context) {
         Log.d("HapticController", "Starting continuous vibration.")
         isVibrating = true
 
-        // Pattern: { delay_before_vibration, vibration_duration }
         val pattern = longArrayOf(0, VIBRATION_DURATION)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            // Index 0 makes it loop indefinitely
             vibrator.vibrate(VibrationEffect.createWaveform(pattern, 0))
         } else {
             @Suppress("DEPRECATION")
@@ -342,6 +339,7 @@ val greekBrailleLetters = listOf(
 fun BrailleInputSurface(
     context: Context,
     letter: BrailleLetter,
+    isEnabled: Boolean,
     duration: Long = 40L
 ) {
     val hapticController = remember { HapticController(context) }
@@ -392,7 +390,7 @@ fun BrailleInputSurface(
                 }
             }
     ) {
-        TitleVoice(stringResource(id = letter.resourceId))
+        TitleVoice(stringResource(id = letter.resourceId), isEnabled)
         NormalText(value = letter.symbol, textAlign = TextAlign.Center, fontSize = 50)
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -426,7 +424,7 @@ fun BrailleInputSurface(
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun LearnInit(navHostController: NavHostController) {
+fun LearnInit(navHostController: NavHostController, isEnabled: Boolean) {
     val context = LocalContext.current
     var currentIndex by remember { mutableIntStateOf(0) }
     val hapticController = remember { HapticController(context) }
@@ -455,7 +453,7 @@ fun LearnInit(navHostController: NavHostController) {
                     verticalArrangement = Arrangement.Top
                 ) {
                     currentLetter?.let { letter ->
-                        BrailleInputSurface(context = context, letter = letter)
+                        BrailleInputSurface(context = context, letter = letter, isEnabled)
                     }
                 }
 
@@ -533,5 +531,5 @@ fun LearnInit(navHostController: NavHostController) {
 @Preview
 @Composable
 fun LearnInitPreview() {
-    LearnInit(navHostController = rememberNavController())
+    LearnInit(navHostController = rememberNavController(), isEnabled = false)
 }

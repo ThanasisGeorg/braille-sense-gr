@@ -3,6 +3,10 @@ package com.thanasis.braillesensegr
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -10,8 +14,8 @@ import androidx.navigation.compose.composable
 import com.thanasis.braillesensegr.ui.screens.AskForTutorialInit
 import com.thanasis.braillesensegr.ui.screens.HomeInit
 import com.thanasis.braillesensegr.ui.screens.LearnInit
-import com.thanasis.braillesensegr.ui.screens.SettingsInit
 import com.thanasis.braillesensegr.ui.screens.TutorialInit
+import com.thanasis.braillesensegr.ui.screens.settingsInit
 
 enum class BrailleSenseGRApp(val title: Int) {
     Home(title = R.string.app_name),
@@ -23,22 +27,23 @@ enum class BrailleSenseGRApp(val title: Int) {
 
 @Composable
 fun MainApp(navHostController: NavHostController) {
+    var isEnabled by remember { mutableStateOf(true) }
     Surface(color = MaterialTheme.colorScheme.background) {
         NavHost(navController = navHostController, startDestination = BrailleSenseGRApp.Home.name) {
             composable(BrailleSenseGRApp.Home.name) {
-                HomeInit(navHostController, context = LocalContext.current)
+                HomeInit(navHostController, context = LocalContext.current, isEnabled)
             }
             composable(BrailleSenseGRApp.AskForTutorial.name) {
-                AskForTutorialInit(navHostController, context = LocalContext.current)
+                AskForTutorialInit(navHostController, context = LocalContext.current, isEnabled)
             }
             composable(BrailleSenseGRApp.Tutorial.name) {
-                TutorialInit(navHostController, context = LocalContext.current)
+                TutorialInit(navHostController, context = LocalContext.current, isEnabled)
             }
             composable(BrailleSenseGRApp.Learn.name) {
-                LearnInit(navHostController)
+                LearnInit(navHostController, isEnabled)
             }
             composable(BrailleSenseGRApp.Settings.name) {
-                SettingsInit(navHostController)
+                isEnabled = settingsInit(navHostController)
             }
         }
     }
