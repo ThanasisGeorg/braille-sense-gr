@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
@@ -14,8 +15,8 @@ import androidx.navigation.compose.composable
 import com.thanasis.braillesensegr.ui.screens.AskForTutorialInit
 import com.thanasis.braillesensegr.ui.screens.HomeInit
 import com.thanasis.braillesensegr.ui.screens.LearnInit
+import com.thanasis.braillesensegr.ui.screens.SettingsInit
 import com.thanasis.braillesensegr.ui.screens.TutorialInit
-import com.thanasis.braillesensegr.ui.screens.settingsInit
 
 enum class BrailleSenseGRApp(val title: Int) {
     Home(title = R.string.app_name),
@@ -27,7 +28,7 @@ enum class BrailleSenseGRApp(val title: Int) {
 
 @Composable
 fun MainApp(navHostController: NavHostController) {
-    var isEnabled by remember { mutableStateOf(true) }
+    var isEnabled by rememberSaveable { mutableStateOf(true) }
     Surface(color = MaterialTheme.colorScheme.background) {
         NavHost(navController = navHostController, startDestination = BrailleSenseGRApp.Home.name) {
             composable(BrailleSenseGRApp.Home.name) {
@@ -43,7 +44,7 @@ fun MainApp(navHostController: NavHostController) {
                 LearnInit(navHostController, isEnabled)
             }
             composable(BrailleSenseGRApp.Settings.name) {
-                isEnabled = settingsInit(navHostController)
+                SettingsInit(navHostController, isEnabled) { isEnabled = it }
             }
         }
     }

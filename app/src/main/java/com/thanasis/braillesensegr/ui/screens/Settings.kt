@@ -2,12 +2,14 @@ package com.thanasis.braillesensegr.ui.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -24,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.thanasis.braillesensegr.R
+import com.thanasis.braillesensegr.backend.TitleVoice
 import com.thanasis.braillesensegr.ui.components.HeadingText
 import com.thanasis.braillesensegr.ui.components.NormalText
 import com.thanasis.braillesensegr.ui.components.ReturnFloatingButton
@@ -31,11 +34,14 @@ import com.thanasis.braillesensegr.ui.components.TTSwitch
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun settingsInit(navHostController: NavHostController): Boolean {
-    var isEnabled by remember { mutableStateOf(true) }
-    //TitleVoice(stringResource(R.string.settingsVoiceText))
+fun SettingsInit(
+    navHostController: NavHostController,
+    isEnabled: Boolean,
+    onCheckedChanged: (Boolean) -> Unit
+) {
+    TitleVoice(stringResource(R.string.settingsVoiceText), isEnabled)
     Scaffold {
-        Column {
+        Column() {
             Spacer(modifier = Modifier.height(40.dp))
             ReturnFloatingButton(
                 navHostController = navHostController,
@@ -51,35 +57,31 @@ fun settingsInit(navHostController: NavHostController): Boolean {
                 HeadingText(stringResource(R.string.settings), 40, TextAlign.Center)
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
+                    verticalArrangement = Arrangement.SpaceEvenly,
                     modifier = Modifier
-                        .height(500.dp)
-                        .fillMaxWidth()
-                        .padding(10.dp, 0.dp)
+                        .fillMaxSize()
                 ) {
-                    Spacer(modifier = Modifier.height(50.dp))
+                    Spacer(modifier = Modifier.height(5.dp))
                     TTSwitch(
                         isEnabled = isEnabled,
-                        onCheckedChanged = {
-                            isEnabled = it
-                        }
+                        onCheckedChanged = onCheckedChanged
                     )
-                }
-                if (isEnabled) {
-                    //
-                    NormalText("Η λειτουργία Κείμενο σε Ομιλία είναι ενεργοποιημένη", TextAlign.Center, 30)
-                } else {
-                    NormalText("Η λειτουργία Κείμενο σε Ομιλία είναι απενεργοποιημένη", TextAlign.Center, 35)
+                    NormalText(
+                        if (isEnabled)
+                            "Η λειτουργία Κείμενο σε Ομιλία είναι ενεργοποιημένη"
+                        else
+                            "Η λειτουργία Κείμενο σε Ομιλία είναι απενεργοποιημένη",
+                        TextAlign.Center,
+                        30
+                    )
                 }
             }
         }
     }
-
-    return isEnabled
 }
 
 @Preview
 @Composable
 fun SettingsInitPreview() {
-    settingsInit(navHostController = rememberNavController())
+    SettingsInit(navHostController = rememberNavController(), isEnabled = true, onCheckedChanged = {})
 }
